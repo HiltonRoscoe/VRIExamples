@@ -21,8 +21,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: >-
-                https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.VoterRecordsRequest
+              $ref: '#/components/schemas/VoterRecordsRequest'
       responses:
         '200':
           description: A response object
@@ -36,3 +35,17 @@ paths:
                       https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationRejection
                   - $ref: >-
                       https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationSuccess
+components:
+  schemas:
+    VoterRecordsRequest:
+     $ref: >-
+      https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.VoterRecordsRequest
+    RegistrationAcknowledgement:
+      $ref: >-
+        https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationAcknowledgement
+    RegistrationRejection:
+     $ref: >-
+          https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationRejection
+    RegistrationSuccess:
+     $ref: >-
+        https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationSuccess
