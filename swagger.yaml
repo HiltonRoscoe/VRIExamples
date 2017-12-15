@@ -1,0 +1,38 @@
+openapi: 3.0.0
+info:
+  contact:
+    name: John Wack
+    email: john.wack@nist.gov
+    url: 'https://www.nist.gov/itl/voting'
+  license:
+    name: Public Domain
+  version: 1.0.0
+  title: Voter Records Interchange
+  description: Example showing how the NIST VRI spec could be exposed over a web api
+servers:
+  - description: Ficticious address
+    url: 'https://voterportal.electionsagency.us'
+paths:
+  /voterReg:
+    post:
+      summary: Submit a voter registration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: >-
+                https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.VoterRecordsRequest
+      responses:
+        '200':
+          description: A response object
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: >-
+                      https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationAcknowledgement
+                  - $ref: >-
+                      https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationRejection
+                  - $ref: >-
+                      https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationSuccess
