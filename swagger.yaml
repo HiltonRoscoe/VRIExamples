@@ -29,23 +29,16 @@ paths:
             application/json:
               schema:
                 oneOf:
-                  - $ref: >-
-                      https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationAcknowledgement
-                  - $ref: >-
-                      https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationRejection
-                  - $ref: >-
-                      https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationSuccess
+                  - $ref: '#/components/schemas/RegistrationAcknowledgement'
+                  - $ref: '#/components/schemas/RegistrationRejection'
+                  - $ref: '#/components/schemas/RegistrationSuccess'
 components:
   schemas:
     VoterRecordsRequest:
-     $ref: >-
-      https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.VoterRecordsRequest
+      $ref: 'https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.VoterRecordsRequest'
     RegistrationAcknowledgement:
-      $ref: >-
-        https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationAcknowledgement
+      $ref: 'https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RequestAcknowledgement'
     RegistrationRejection:
-     $ref: >-
-          https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationRejection
+      $ref: 'https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RequestRejection'
     RegistrationSuccess:
-     $ref: >-
-        https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RegistrationSuccess
+      $ref: 'https://raw.githubusercontent.com/usnistgov/VoterRecordsInterchange/master/NIST_V0_voter_records_interchange.json#/definitions/VRI.RequestSuccess'
