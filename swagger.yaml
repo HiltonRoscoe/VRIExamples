@@ -10,7 +10,7 @@ info:
   title: Voter Records Interchange
   description: Example showing how the NIST VRI spec could be exposed over a web api
 servers:
-  - description: Ficticious address
+  - description: Fictitious address
     url: 'https://voterportal.electionsagency.us'
 paths:
   /voterReg:
