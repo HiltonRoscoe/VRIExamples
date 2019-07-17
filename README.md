@@ -19,9 +19,9 @@ using the [Voter Records Interchange Common Data Format](https://github.com/usni
 
 There are numerous advantages to building services using OpenAPI:
 
-- Automatic generation of documentation [(example)](https://jdziurlaj.github.io/VRIExamples/index.html) and metadata webpages.
+- Automatic generation of documentation [(example)](https://hiltonroscoe.github.io/VRIExamples/index.html) and metadata webpages.
 - Automatic generation of [client and server stubs](https://github.com/OpenAPITools/openapi-generator). The server stubs can be used by the jurisdiction, while the client boilerplate could be used by a third party agency, such as a motor vehicle agency or third party registrar.
-- [Tooling support](https://swagger.io/tools/open-source/) for editing OpenAPI documents
+- [Tooling support](https://swagger.io/tools/open-source/) for editing OpenAPI documents.
 - Documentation and implementation are always in sync because they are derived from the same source.
 
 Most of all, OpenAPI makes the most of scarce IT resources by reducing the amount of effort required to create a Web API.
@@ -43,8 +43,9 @@ Security is out of scope of this example. However, it should be noted that OpenA
 ## Try it out
 
 - Generated Documentation
-  - Visit the [generated documentation](https://jdziurlaj.github.io/VRIExamples/index.html).
+  - View the [generated documentation](https://hiltonroscoe.github.io/VRIExamples/index.html).
 - Editor / Generator
-  - Open the [Swagger Editor](https://editor.swagger.io/)
-  - Click `File`, `Import URL`
+  - Open the [Swagger Editor](https://editor.swagger.io/).
+  - Click `File`, `Import URL`.
   - Enter `https://raw.githubusercontent.com/JDziurlaj/VRIExamples/master/swagger.yaml` into the text box, then click `OK`.
+  - You can now edit the file, or generate clients.
